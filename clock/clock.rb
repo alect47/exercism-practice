@@ -2,7 +2,7 @@ class Clock
   attr_reader :hour, :minute
 
   def initialize(hour: 0, minute: 0)
-    @hour = hour
+    @hour = (hour + minute / 60) % 24
     @minute = minute % 60
   end
 
