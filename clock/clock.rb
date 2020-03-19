@@ -11,4 +11,8 @@ class Clock
     m = '%02d' % minute
     "#{h}:#{m}"
   end
+
+  def +(clock)
+    Clock.new(hour: (clock.hour + @hour), minute: (clock.minute + @minute))
+  end
 end
