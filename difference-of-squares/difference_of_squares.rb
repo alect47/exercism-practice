@@ -5,6 +5,14 @@ class Squares
   end
 
   def square_of_sum
-    (0..@number).to_a.sum ** 2
+    (0..@number).sum ** 2
+  end
+
+  def sum_of_squares
+    (0..@number).sum {|n| n ** 2}
+  end
+
+  def difference
+    square_of_sum - sum_of_squares
   end
 end
