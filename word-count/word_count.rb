@@ -1,7 +1,7 @@
 class Phrase
 
   def initialize(phrase)
-    @phrase = phrase.split
+    @phrase = phrase.split(/[^\w-]+/)
   end
 
   def word_count
